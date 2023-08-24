@@ -6,13 +6,15 @@ SRCS = *.c
 
 NAME = philo
 
-${NAME}: all
+all: ${NAME}
 
-all:
-	${CC} ${CFLAGS} ${SRCS} -o ${NAME}
+${NAME}:
+	@${CC} ${CFLAGS} ${SRCS} -o ${NAME}
+	@echo "Successfully create compile file ./${NAME}"
 
 clean:
-	${RM} ${NAME}
+	@${RM} ${NAME}
+	@echo "Successfully delete compile file ./${NAME}"
 
 fclean: clean
 
